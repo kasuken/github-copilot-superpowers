@@ -1,0 +1,24 @@
+{
+  "editor.aiStats.enabled": true,
+
+  "chat.agent.maxRequests": 125,
+  "chat.useAgentSkills": true,
+  "chat.useAgentsMdFile": true,
+  "chat.useNestedAgentsMdFiles": true,
+  "chat.customAgentInSubagent.enabled": true,
+
+  "inlineChat.enableV2": true,
+  "github.copilot.nextEditSuggestions.enabled": true,
+  "github.copilot.chat.newWorkspace.useContext7": true,
+  "github.copilot.chat.alternateGptPrompt.enabled": true,
+  "github.copilot.chat.codesearch.enabled": true,
+  "github.copilot.chat.scopeSelection": true,
+
+  "github.copilot.chat.useResponsesApi": true,
+  "github.copilot.chat.responsesApiReasoningEffort": "high",
+  "github.copilot.chat.responsesApiReasoningSummary": "detailed",
+  "github.copilot.chat.cli.customAgents.enabled": true,
+  "github.copilot.chat.cli.mcp.enabled": true,
+  "github.copilot.chat.githubMcpServer.enabled": true,
+  "github.copilot.chat.githubMcpServer.readonly": true
+}
