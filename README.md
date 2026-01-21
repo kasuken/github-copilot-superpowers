@@ -3,6 +3,8 @@
 
 Opinionated, repo-local configuration for **GitHub Copilot (Chat + Agent mode)**: instruction hierarchy, reusable prompt files, custom agent profiles, and MCP server config.
 
+<img width="1536" height="1024" alt="GitHub Copilot SuperPowers" src="https://github.com/user-attachments/assets/3414f8d4-5180-4926-8850-18378710a930" />
+
 [Quickstart](#quickstart) • [What’s inside](#whats-inside) • [MCP servers](#mcp-servers) • [Repo layout](#repo-layout)
 
 > [!NOTE]
