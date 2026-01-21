@@ -9,7 +9,7 @@ applyTo: '**'
 
 **Priority order when conflicts occur:**
 1. **subagents.instructions.md** (SSOT) - Orchestrator delegation rules, absolute restrictions, Context Package contract
-2. **copilot-agent.instructions.md** (this file) - Execution protocol & quality standards
+2. **copilot-agent.instructions.md** (this file) - Developer runbook & quality standards
 3. task-direction-approval.instructions.md - User approval for direction changes
 4. taming-copilot.instructions.md - User-facing output format
 5. Other domain-specific instructions
@@ -32,7 +32,7 @@ applyTo: '**'
 ## ⛔ MANDATORY RESPONSE TEMPLATE (EVERY REQUEST)
 
 > **Execution order:** Invoke Sequential-thinking → Display this template.
-> See "EXECUTION PROTOCOL - 6 PHASES" below for details.
+> See "DEVELOPER RUNBOOK - 6 PHASES" below for details.
 
 **⚠️ INTEGRITY CHECK:** The status below MUST reflect ACTUAL delegations/tool calls made in THIS response.
 Marking ✅ without proper execution is a CRITICAL VIOLATION equivalent to lying to the user.
@@ -40,10 +40,10 @@ Marking ✅ without proper execution is a CRITICAL VIOLATION equivalent to lying
 **EVERY response MUST start with:**
 
 ```
-🧠 **PRE-WORK EXECUTION STATUS**
+🛠️ **PREFLIGHT CHECK**
 - [✅/❌] Sequential-thinking MCP: {Executed by orchestrator - reason}
-- [✅/❌] **Forbidden MCP Gate**: Check SSOT before every tool call
-- [✅/⏭️] Subagent dispatched: {Yes - task description / Skip - reason}
+- [✅/❌] **SSOT Tool Gate**: Check SSOT before every tool call
+- [✅/⏭️] Delegation status: {Yes - task description / Skip - reason}
   - [✅/⏭️] Serena MCP: {Delegated via subagent / Skip - reason} [Context Package: .copilot/docs/X.md]
   - [✅/⏭️] Context7 MCP: {Delegated via subagent / Skip - reason} [Context Package: .copilot/docs/X.md]
   - [✅/⏭️] GitHub MCP: {Delegated via subagent / Skip - reason} [Context Package: .copilot/docs/X.md]
@@ -54,7 +54,7 @@ Marking ✅ without proper execution is a CRITICAL VIOLATION equivalent to lying
 2. The subagent executed the MCP and returned a Context Package
 3. The Context Package reference is noted above
 
-**Subagent dispatched ✅ requires:**
+**Delegation status ✅ requires:**
 1. `runSubagent` tool was actually invoked in THIS response
 2. The subagent returned a Context Package or completion summary
 
@@ -62,7 +62,7 @@ Marking ✅ without proper execution is a CRITICAL VIOLATION equivalent to lying
 
 **⚠️ APPLIES TO EVERY REQUEST:** Including simple questions, follow-ups, and clarifications.
 
-## 🚨 EXECUTION PROTOCOL - 6 PHASES
+## 🚨 DEVELOPER RUNBOOK - 6 PHASES
 
 ### PHASE 1: Request Analysis (EVERY USER REQUEST)
 
@@ -70,7 +70,7 @@ Marking ✅ without proper execution is a CRITICAL VIOLATION equivalent to lying
 
 **⚠️ CRITICAL EXECUTION ORDER:**
 1. **FIRST**: Invoke the tool (actual function call)
-2. **THEN**: Display PRE-WORK EXECUTION STATUS
+2. **THEN**: Display PREFLIGHT CHECK
 3. The ✅ checkmark can ONLY be used AFTER a successful tool call in the current response
 
 **🚫 VIOLATION:** Marking ✅ without actual tool invocation is FORBIDDEN.
@@ -98,6 +98,7 @@ Before invoking ANY tool, check the **⛔ FORBIDDEN DIRECT CALLS** table in `sub
 
 **If you catch yourself mid-call on a forbidden MCP, ABORT and delegate.**
 
+
 ### PHASE 3: Dispatch Research Subagent(s)
 
 **For ALL investigation/data-fetching I/O, dispatch subagents.**
@@ -120,7 +121,7 @@ Before invoking ANY tool, check the **⛔ FORBIDDEN DIRECT CALLS** table in `sub
 
 ### PHASE 6: Terminal Verification & Proceed
 
-**Display PRE-WORK EXECUTION STATUS, then proceed with terminal verification (build/test/lint).**
+**Display PREFLIGHT CHECK, then proceed with terminal verification (build/test/lint).**
 
 ## 📛 NO ASSUMPTIONS
 
@@ -128,6 +129,7 @@ Before invoking ANY tool, check the **⛔ FORBIDDEN DIRECT CALLS** table in `sub
 
 **Before responding, verify:**
 - [ ] Do I have the source/documentation for this information?
+
 - [ ] Could this vary by version, time, or context?
 - [ ] Am I using words like "probably", "should be", "I believe", "usually"?
 - [ ] Have I verified with official documentation?
@@ -136,6 +138,7 @@ Before invoking ANY tool, check the **⛔ FORBIDDEN DIRECT CALLS** table in `sub
 
 **Forbidden self-deception patterns:**
 - ❌ "I'm confident about this" → Confidence is NOT verification
+
 - ❌ "This is standard practice" → Verify the standard
 - ❌ "I know this library" → Check current version docs
 - ❌ "It should work this way" → Confirm with authoritative source
@@ -151,7 +154,7 @@ Detailed triggers, verification workflow, and source priority are in the `uncert
 - [ ] Did I invoke `mcp_sequential-th_sequentialthinking` myself?
 - [ ] If I marked ✅ for investigation MCPs, did a subagent actually execute them?
 - [ ] Am I running terminal commands ONLY for build/test/verification?
-- [ ] Did I pass the Forbidden MCP Gate check (no direct Context7/Serena/GitHub/fetch calls)?
+- [ ] Did I pass the SSOT Tool Gate check (no direct Context7/Serena/GitHub/fetch calls)?
 
 **If any answer is NO → You are in violation. Correct immediately.**
 
@@ -165,14 +168,13 @@ See the `investigation-mode` skill for the repeated-failure stop rule and the in
 
 ## 🎯 IMPLEMENTATION RULES
 
-### Execution Protocol
+### Developer Runbook
 1. **Sequential-thinking FIRST** - Execute for EVERY user request before any action
-2. **Forbidden MCP Gate** - Check SSOT before every tool call
+2. **SSOT Tool Gate** - Check SSOT before every tool call
 3. **Delegate All Investigation** - Never perform investigation I/O directly
 4. **Subagent Returns Context Package** - Summary + citations + next actions
 5. **Terminal for Verification Only** - Build/test/lint only, never for reading/searching
 6. **NEVER Edit Code Directly** - Delegate all code creation/modification to implementation subagent
-
 ### Development Flow
 7. **Quality First** - Apply consistent high standards to all tasks regardless of perceived complexity
 8. **Stay Focused** - Address core requirement first, optimize later
