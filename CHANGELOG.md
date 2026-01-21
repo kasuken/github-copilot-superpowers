@@ -1,5 +1,26 @@
 # Changelog
 
+## [1.0.1] - 2026-01-21
+
+> Small clarity pass: make the runbook and status template read like developer tooling, not bureaucracy.
+
+### 📚 Documentation Updates
+
+- **docs:** Rename “Execution protocol” terminology to **Developer runbook** in the instruction guidance
+- **docs:** Rename “Pre-work execution status” template to **Preflight check** and refresh template labels for readability
+
+### ⚙️ Configuration Changes
+
+- **config:** Update the mandatory response template naming to match the new terminology (**SSOT Tool Gate**, **Delegation status**)
+
+### 🙏 Acknowledgments
+
+Thanks to everyone providing feedback on wording and ergonomics.
+
+### 📄 License
+
+This repository does not currently include a `LICENSE` file. Add one before publishing or distributing to make the usage terms explicit.
+
 ## [1.0.0] - 2026-01-20
 
 ### 🎉 Initial Release
@@ -104,3 +125,4 @@ This configuration is intentionally opinionated. Adjust strictness by editing in
 ---
 
 [1.0.0]: https://github.com/OWNER/REPO/releases/tag/v1.0.0
+[1.0.1]: https://github.com/OWNER/REPO/releases/tag/v1.0.1
