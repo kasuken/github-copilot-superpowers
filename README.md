@@ -67,13 +67,14 @@ Located in `.github/skills/`, this repo includes 6 ready-to-use skills:
 
 Custom agents define specialized "modes" for focused collaboration. Select an agent profile when you want tailored behavior for your specific task.
 
-Located in `.github/agents/`, this repo includes 3 custom agent profiles:
+Located in `.github/agents/`, this repo includes 4 custom agent profiles:
 
 | Agent | Role | Best for |
 |-------|------|----------|
 | **Critical Thinking** | Questions assumptions and encourages exploration of alternative approaches and edge cases | Architecture reviews, design decisions, risk analysis |
 | **Mentor** | Provides Socratic guidance through critical questioning without providing direct solutions | Learning, skill development, understanding complex systems |
 | **Janitor** | Focuses on cleanup, simplification, and technical debt remediation | Code cleanup, refactoring, removing dead code, performance optimization |
+| **Tech Debt Remediation Plan** | Generates comprehensive technical debt remediation plans with metrics and actionable steps | Technical debt analysis, code quality assessment, planning refactoring work |
 
 ## MCP Servers
 
