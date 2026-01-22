@@ -1,5 +1,44 @@
 # Changelog
 
+## [1.0.2] - 2026-01-22
+
+> License addition, documentation expansion, and new technical debt remediation agent.
+
+### ✨ New Features
+
+- **feat:** Add Technical Debt Remediation Plan agent ([.github/agents/tech-debt-remediation-plan.agent.md](.github/agents/tech-debt-remediation-plan.agent.md))
+  - Generates comprehensive technical debt remediation plans with analysis framework
+  - Includes core metrics: Ease of Remediation (1-5), Impact with visual icons, Risk indicators (🟢🟡🔴)
+  - Covers common debt types: test coverage, documentation, code structure, deprecated dependencies
+  - Output format: Summary table + detailed plan with implementation steps and testing methods
+  - Analysis only - no code modifications
+
+### 📚 Documentation Updates
+
+- **docs:** Expand README with detailed component documentation ([README.md](README.md))
+  - Add comprehensive agent skills table with purpose and usage triggers
+  - Add custom agents table with roles and best-use scenarios
+  - Add MCP servers table with launch methods and prerequisites
+  - Add VS Code settings breakdown organized by category (Agent & Skill Activation, Advanced Reasoning, Context & Search, MCP & CLI Integration, Analytics)
+  - Expand MCP server documentation with prerequisites and troubleshooting guidance
+
+### 📄 License
+
+- **license:** Add MIT License file ([LICENSE](LICENSE))
+  - Copyright 2026 Emanuele Bartolesi
+  - Standard MIT License terms with full permissions and warranty disclaimers
+- **fix:** Update copyright holder in LICENSE file to Emanuele Bartolesi
+
+### ⚙️ Configuration Changes
+
+- **chore:** Remove `RELEASE_NOTES.md` as it is superseded by structured CHANGELOG.md format
+  - Consolidate version history into single CHANGELOG.md file
+  - Maintain consistent format across all releases
+
+### 🙏 Acknowledgments
+
+Thanks to contributors and early adopters providing feedback on agent configuration, documentation structure, and license requirements.
+
 ## [1.0.1] - 2026-01-21
 
 > Small clarity pass: make the runbook and status template read like developer tooling, not bureaucracy.
@@ -126,3 +165,4 @@ This configuration is intentionally opinionated. Adjust strictness by editing in
 
 [1.0.0]: https://github.com/OWNER/REPO/releases/tag/v1.0.0
 [1.0.1]: https://github.com/OWNER/REPO/releases/tag/v1.0.1
+[1.0.2]: https://github.com/OWNER/REPO/compare/v1.0.1...v1.0.2
