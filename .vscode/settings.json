@@ -23,12 +23,17 @@
   "github.copilot.chat.githubMcpServer.readonly": true,
 
   "github.copilot.chat.commitMessageGeneration.instructions": [
-    { "text": "Use conventional commit format: type(scope): description." },
-    { "text": "Use imperative mood: 'Add feature' not 'Added feature'." },
-    { "text": "Keep subject line under 50 characters." },
-    { "text": "Use types: feat, fix, docs, style, refactor, perf, test, chore, ci." },
-    { "text": "Include scope when relevant (e.g., api, ui, auth)." },
-    { "text": "For additional details, use a well-structured body section." },
-    { "text": "Use bullet points (*) for clarity." }
+      { "text": "Follow Conventional Commits: type(scope): description." },
+      { "text": "Use lowercase type and scope." },
+      { "text": "Use imperative mood: 'add', 'fix', 'update', not past tense." },
+      { "text": "Keep subject under 50 characters. No period." },
+      { "text": "Describe the intent clearly. Avoid vague messages like 'update code'." },
+      { "text": "Use only these types: feat, fix, docs, style, refactor, perf, test, chore, ci." },
+      { "text": "Include a scope when the change targets a specific area." },
+      { "text": "Ensure each commit represents one logical change." },
+      { "text": "Add a body when needed, separated by a blank line." },
+      { "text": "Use bullet points (*) in the body for multiple changes." },
+      { "text": "Explain why the change was made, not only what changed." },
+      { "text": "Add BREAKING CHANGE: in the footer when applicable." }
   ]
 }
