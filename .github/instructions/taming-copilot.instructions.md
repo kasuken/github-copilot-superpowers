@@ -1,5 +1,6 @@
 ---
 applyTo: '**'
+excludeAgent: "coding-agent"
 description: 'Prevent Copilot from wreaking havoc across your codebase, keeping it under control.'
 ---
 
