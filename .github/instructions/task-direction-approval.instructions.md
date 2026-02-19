@@ -1,5 +1,6 @@
 ---
 applyTo: '**'
+excludeAgent: "coding-agent"
 description: 'Prevents unauthorized direction changes by requiring user approval before deviating from original requirements.'
 ---
 
