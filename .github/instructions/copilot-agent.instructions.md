@@ -1,5 +1,6 @@
 ---
 applyTo: '**'
+excludeAgent: "coding-agent"
 ---
 # Copilot Agent Instructions
 
