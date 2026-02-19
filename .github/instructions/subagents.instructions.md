@@ -1,5 +1,6 @@
 ---
 applyTo: '**'
+excludeAgent: "coding-agent"
 ---
 # Subagent Instructions (SSOT)
 
